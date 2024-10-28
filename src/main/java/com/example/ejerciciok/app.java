@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 
 import java.io.IOException;
 /**
@@ -12,6 +13,8 @@ import java.io.IOException;
  * La clase carga el archivo FXML, configura la escena, la ventana principal y añade un ícono.
  */
 public class app extends Application {
+    private static Stage stageS;
+
 
     /**
      * Método start, que inicializa y muestra la ventana principal de la aplicación.
@@ -21,13 +24,14 @@ public class app extends Application {
      */
     @Override
     public void start(Stage stage) throws IOException {
+        stageS=stage;
         FXMLLoader fxmlLoader = new FXMLLoader(app.class.getResource("/com/example/ejerciciok/hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setResizable(false);
-        stage.setWidth(679);
-        stage.setHeight(620);
+        stage.setWidth(480);
+        stage.setHeight(400);
         try {
-            Image img = new Image(getClass().getResource("/com/example/ejerciciok/images/Icono.ico").toString());
+            Image img = new Image(getClass().getResource("/com/example/ejerciciok/images/reloj.png").toString());
             stage.getIcons().add(img);
         } catch (Exception e) {
             System.out.println("Error al cargar la imagen: " + e.getMessage());
@@ -43,5 +47,9 @@ public class app extends Application {
      */
     public static void main(String[] args) {
         launch();
+    }
+
+    public static Window getStage() {
+        return stageS;
     }
 }

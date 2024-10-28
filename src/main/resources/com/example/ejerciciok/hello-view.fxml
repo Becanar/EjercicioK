@@ -15,7 +15,7 @@
       </ImageView>
       <AnchorPane fx:id="panelAncla">
          <children>
-            <HBox fx:id="panelNum" alignment="CENTER" layoutX="65.0" layoutY="182.0" prefHeight="100.0" prefWidth="200.0">
+            <HBox fx:id="panelNum" alignment="CENTER" layoutX="50.0" layoutY="160.0" prefHeight="100.0" prefWidth="200.0">
                <children>
                   <ImageView fx:id="imgH1" pickOnBounds="true" preserveRatio="true">
                      <image>

@@ -49,6 +49,11 @@ public class app extends Application {
         launch();
     }
 
+    /**
+     * Devuelve el escenario principal de la aplicación.
+     *
+     * @return el escenario principal.
+     */
     public static Window getStage() {
         return stageS;
     }
